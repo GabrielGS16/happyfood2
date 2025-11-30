@@ -20,5 +20,9 @@
         @endforeach
     </ul>
     <a href="{{ route('deliverydrivers.create') }}">Create New Delivery Driver</a>
+    <br>
+    <a href="{{ route('categories.index') }}">Back to Categories List</a>
+    <br>
+    <a href="{{ route('delivery.index') }}">Back to Deliveries List</a>
 </body>
 </html>
