@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\CouponController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\DeliverydriversController;
 use App\Http\Controllers\CategoryController;
@@ -22,4 +23,5 @@ Route::middleware('auth')->group(function () {
 Route::resource('categories', CategoryController::class);
 Route::resource('deliverydrivers', DeliverydriversController::class);
 Route::resource('foods', FoodController::class);
+Route::resource('coupons', CouponController::class);
 require __DIR__.'/auth.php';

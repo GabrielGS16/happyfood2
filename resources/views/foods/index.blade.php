@@ -20,5 +20,11 @@
         @endforeach
         <a href="{{ route('foods.create') }}">Create New Food</a>
     </ul>
+    <br>
+    <a href="{{ route('categories.index') }}">Back to Categories List</a>
+    <br>
+    <a href="{{ route('deliverydrivers.index') }}">Back to Delivery Drivers List</a>    
+    <br>
+    <a href="{{ route('coupons.index') }}">Back to Coupons List</a>
 </body>
 </html>

@@ -21,6 +21,8 @@
     <br>
     <a href="{{ route('deliverydrivers.index') }}">Back to Delivery Drivers List</a>
     <br>
-    <a href="{{ route('delivery.index') }}">Back to Deliveries List</a>
+    <a href="{{ route('foods.index') }}">Back to Foods List</a>
+    <br>
+    <a href="{{ route('coupons.index') }}">Back to Coupons List</a>
 </body>
 </html>
