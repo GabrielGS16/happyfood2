@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\DeliverydriversController;
@@ -24,4 +25,5 @@ Route::resource('categories', CategoryController::class);
 Route::resource('deliverydrivers', DeliverydriversController::class);
 Route::resource('foods', FoodController::class);
 Route::resource('coupons', CouponController::class);
+Route::resource('stores', StoreController::class);
 require __DIR__.'/auth.php';

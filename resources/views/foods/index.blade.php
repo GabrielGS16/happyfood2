@@ -26,5 +26,6 @@
     <a href="{{ route('deliverydrivers.index') }}">Back to Delivery Drivers List</a>    
     <br>
     <a href="{{ route('coupons.index') }}">Back to Coupons List</a>
+    <br>
 </body>
 </html>

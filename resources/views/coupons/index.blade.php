@@ -24,5 +24,6 @@
     <a href="{{ route('foods.index') }}">Back to Deliveries List</a>
     <br>
     <a href="{{ route('categories.index') }}">Back to Categories List</a>
+    <br>
 </body>
 </html>

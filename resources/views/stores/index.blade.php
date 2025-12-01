@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>delivery drivers-index</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Delivery Drivers List</h1>
+    <h1>Stores List</h1>
     <ul>
-        @foreach($deliveryDrivers as $driver)
-            <li>{{ $driver->name }} - {{ $driver->phone }} - {{ $driver->vehicle_type }} 
-                <a href="{{ route('deliverydrivers.edit', $driver->id) }}">Edit</a> 
-                <form action="{{ route('deliverydrivers.destroy', $driver->id) }}" method="POST" onsubmit="return confirm('tem certeza que quer excluir isso?');" style="display:inline;">
+        @foreach($stores as $store)
+            <li>{{ $store->name }} - {{ $store->address }} - {{ $store->phone }} 
+                <a href="{{ route('stores.edit', $store->id) }}">Edit</a> 
+                <form action="{{ route('stores.destroy', $store->id) }}" method="POST" onsubmit="return confirm('tem certeza que quer excluir isso?');" style="display:inline;">
                     @csrf
                     @method('DELETE')
                     <button type="submit">Delete</button> 
@@ -19,9 +19,11 @@
             </li>            
         @endforeach
     </ul>
-    <a href="{{ route('deliverydrivers.create') }}">Create New Delivery Driver</a>
+    <a href="{{ route('stores.create') }}">Create New Store</a>
     <br>
     <a href="{{ route('categories.index') }}">Back to Categories List</a>
+    <br>
+    <a href="{{ route('deliverydrivers.index') }}">Back to Delivery Drivers List</a>    
     <br>
     <a href="{{ route('foods.index') }}">Back to Foods List</a>
     <br>
