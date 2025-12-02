@@ -22,7 +22,9 @@ class DeliverydriversRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:20|unique:deliverydrivers,phone',
+            'vehicle_type' => 'nullable|string|max:100',
         ];
     }
 }
