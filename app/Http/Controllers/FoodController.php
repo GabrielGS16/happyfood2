@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\FoodsRequest;
 use App\Models\Food;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class FoodController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(FoodsRequest $request)
     {
         Food::create($request->all());
         return redirect()->route('foods.index')->with('success', 'Food item created successfully.');
@@ -52,7 +53,7 @@ class FoodController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(FoodsRequest $request, string $id)
     {
         $food = Food::findOrFail($id);
         $food->update($request->all());

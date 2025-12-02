@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\DeliverydriversRequest;
 use App\Models\Deliverydriver;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class DeliverydriversController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(DeliverydriversRequest $request)
     {
         
         Deliverydriver::create($request->all());
@@ -54,7 +55,7 @@ class DeliverydriversController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(DeliverydriversRequest $request, string $id)
     {
         $deliveryDriver = Deliverydriver::findOrFail($id);
         $deliveryDriver->update($request->all());

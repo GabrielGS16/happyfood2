@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\CouponsRequest;
 use App\Models\Coupon;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class CouponController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CouponsRequest $request)
     {
         Coupon::create($request->all());
         return redirect()->route('coupons.index');
@@ -52,7 +53,7 @@ class CouponController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(CouponsRequest $request, string $id)
     {
         $coupon = Coupon::findOrFail($id);
         $coupon->update($request->all());

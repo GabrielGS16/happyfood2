@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\StoresRequest;
 use App\Models\Store;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class StoreController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoresRequest $request)
     {
         Store::create($request->all());
         return redirect()->route('stores.index');
@@ -52,7 +53,7 @@ class StoreController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(StoresRequest $request, string $id)
     {
         $store = Store::findOrFail($id);
         $store->update($request->all());
